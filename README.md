@@ -24,7 +24,6 @@
 | 엔진 | Unity 6 |
 | 플랫폼 | PC |
 
----
 <br>
 
 ## 기술 스택
@@ -36,7 +35,7 @@
 | Version Control | Git, GitHub |
 | 협업 툴 | Notion, Discord |
 
----
+<br>
 
 ## 담당 기능
 
@@ -47,9 +46,9 @@
 - [ScriptableObject 기반 데이터 변환 자동화](#scriptableobject-data-converter)
 - [프레임 저하 원인 분석 및 최적화](#performance-optimization)
 
----
+<br>
 
-# 세부 내용
+---
 
 <a id="player-system"></a>
 
@@ -81,6 +80,8 @@
 
 ## 2. 아이템 시스템
 
+![Item Structure](./images/item-structure.png)
+
 아이템 시스템은 ScriptableObject 기반의 정적 데이터와, 플레이 중 변경되는 런타임 상태를 분리하는 방향으로 구현했습니다.
 
 ### 주요 구조
@@ -96,8 +97,10 @@
 
 ### 처리 흐름
 
+![Acquire Item Flow](./images/acquire-item-flow.png)
+
 1. 카드 선택 또는 보상으로 아이템 인덱스를 전달받습니다.
-2. `MasterDataManager`에서 해당 `ItemData`를 조회합니다.
+2. `MasterDataManager`에서 해당 `(combined)ItemData`를 조회합니다.
 3. 처음 획득한 아이템이면 `ItemModuleContainer`를 생성합니다.
 4. 이미 보유 중인 아이템이면 현재 레벨을 증가시킵니다.
 5. 아이템 데이터에 따라 액티브 / 패시브 모듈을 적용합니다.
