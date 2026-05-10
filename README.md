@@ -5,7 +5,7 @@
 <br>
 
 ## 프로젝트 한 줄 소개
-![Gameplay Preview](./images/gameplay.gif)
+![Gameplay Preview](./images/wtr-gameplay.gif)
 `Way To The Rose`는 Unity 6 기반의 2D 뱀서라이크 / 로그라이트 게임으로,  
 몰려오는 적을 처치하며 아이템을 얻고 성장하여 보스를 처치하는 것이 목표인 게임입니다.
 
